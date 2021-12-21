@@ -29,8 +29,8 @@ const currentDocument = app.activeDocument
 const secondDocument = app.documents[1]
 
 // You can also create an instance of a document via a UXP File entry
-let fileEntry = require('uxp').storage.localFileSystem.getFileForOpening()
-const newDocument = await app.open('/project.psd')
+let fileEntry = await require('uxp').storage.localFileSystem.getFileForOpening()
+const newDocument = await app.open(fileEntry)
 ```
 
 ## Properties
